@@ -22,7 +22,7 @@ export const regexpHandler = () => {
     const str2 = 'info1@methed.ru @meth.ru _@meth.ru info2@meth.ru a1@met.ru info3@me.ru info4@methed.r2u info5@methed.uvwxyz demorest49de@gmail.com';
     console.log(' : ', str2);
 
-    const regExp2 = /([^\s][0-9a-z_]+)@([a-z][a-z][a-z]+)\.([a-z][a-z][^\s])/g;
+    const regExp2 = /([^\s][0-9a-z_]+)@([a-z][a-z][a-z]+)\.([a-z](?!\d)[^\s])/g;
 
     const match2 = str2.match(regExp2);
     console.log(' : ', match2);
