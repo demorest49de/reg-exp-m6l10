@@ -49,4 +49,35 @@ export const regexpHandler = () => {
 
     const replace3 = str3.replace(regExp3, '*');
     // console.log(' : ', replace3);
+
+    console.log('\nЗадание 1.4: ');
+    const str4 = 'Переходите по ссылке ниже что купить эти замечательные товары http://site.ru, https://site.com\n';
+
+    console.log(' : ', str4);
+    const replaceWithLink = (str) => {
+        return str.replace(/https?:\/\/(\w+\.(?:[a-z]{0,5}))(?!\w)/g, (...str) => {
+                console.log(' : ',str);
+                const [http, site] = str;
+            return `<a href="${http}">${site}</a>`;
+        });
+
+    };
+    console.log(replaceWithLink(str4));
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
