@@ -19,18 +19,34 @@ export const regexpHandler = () => {
     // console.log(' : ', replace);
 
     console.log('\nЗадание 1.2: ');
-    const emails = ['info1@methed.ru', 'info1@methed.ruuuuuuuuuu', '@meth.ru', 'my-mail@yaandex.ru', 'tom_yam@ya.ru',
-        'zero@mai1.xyz','_@meth.ru', 'info2@meth.ru', 'a1@met.ru', 'info3@me.ru', 'info4@methed.r2u',
+    const emails = ['info1@methed.ru', 'info1@methed.ruuuuuuuuuu', '@meth.ru', 'my-m-a-i--l@yaandex.ru', 'tom_yam@ya.ru',
+        'zero@mai1.xyz', '_@meth.ru', 'info2@meth.ru', 'a1@met.ru', 'info3@me.ru', 'info4@methed.r2u',
         'info5@methed.uvxyz', 'demorest49de@gmail.com'];
-    console.log(' : ', emails);
-    const str2 = emails.join(' ');
-    const regExp2 = /(?:[\w]{5,})@([a-z]{3,})\.([a-z]{2,5}(?!\w+\s))/g;
+    // console.log(' : ', emails);
+
+
+    const str2 = ' ' + emails.join(', ');
+    console.log(' : ', str2);
+    const regExp2 =
+        /\s(?:[\w]+)@(?:[a-z]{5,})\.(?:[a-z]{0,5})(?!\w)/g;
 
     const match2 = str2.match(regExp2);
     console.log(' : ', match2);
 
     const replace2 = str2.replace(regExp2, '*');
-    console.log(' : ', replace2);
+    // console.log(' : ', replace2);
 
+    console.log('\nЗадание 1.3: ');
+    const str3 = 'Здоровый (праздничный) ужин вовсе не обязательно должен состоять из шпината, гречки и вареной куриной грудки. Самыми лучшими способами приготовления еды (по мнению моей мамы) являются следующие: варка на пару, запекание или варка в воде. Помимо стандартных мандаринов и ананасов, отличным украшением любого стола станут необычные, экзотические фрукты(например: личи, рамбутан, тамаринд). Здоровой может быть даже выпечка, если она приготовлена на пару.\n';
+    // console.log(' : ', emails);
 
+    console.log(' : ', str3);
+    const regExp3 =
+        /(праздничный|по мнению моей мамы|например: личи, рамбутан, тамаринд)/g;
+
+    const match3 = str3.match(regExp3);
+    console.log(' : ', match3);
+
+    const replace3 = str3.replace(regExp3, '*');
+    // console.log(' : ', replace3);
 };
